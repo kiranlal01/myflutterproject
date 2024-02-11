@@ -45,6 +45,10 @@ dependencies:
   liquid_swipe: ^3.1.0
   progressive_image: ^2.0.1
   image_picker: ^1.0.7
+  toggle_switch: ^2.1.0
+  omni_datetime_picker: ^1.0.9
+  shared_preferences: ^2.2.2
+  sqflite: ^2.3.2
 
 
   # The following adds the Cupertino Icons font to your application.
