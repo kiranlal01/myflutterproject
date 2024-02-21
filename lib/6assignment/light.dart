@@ -28,8 +28,8 @@ class _LightState extends State<Light> {
                           Row(mainAxisSize: MainAxisSize.min,
                             children: [
                               Icon(Icons.arrow_back,color: Colors.white),
-                              SizedBox(width: 200,),
-                              Text('Light', style: TextStyle(color: Colors.white),),
+                              SizedBox(width: 160,),
+                              Text('Light', style: TextStyle(color: Colors.white,fontSize:20),),
                               SizedBox(width: 200,),
                             ],
                           ),
@@ -45,9 +45,9 @@ class _LightState extends State<Light> {
                                     child: ToggleSwitch(
                                       minWidth: 40.0,
                                       cornerRadius: 20.0,
-                                      activeBgColors: [[Colors.white!], [Colors.black!]],
+                                      activeBgColors: [[Colors.white!], [Colors.orange!]],
                                       activeFgColor: Colors.white,
-                                      inactiveBgColor: Colors.grey,
+                                      inactiveBgColor: Colors.white,
                                       inactiveFgColor: Colors.white,
                                       initialLabelIndex: 1,
                                       totalSwitches: 2,
@@ -60,16 +60,22 @@ class _LightState extends State<Light> {
                                   ),
                                   SizedBox(height: 40,),
                                   Text('80%',style: TextStyle(color: Colors.white,fontSize: 20),),
-                                  SizedBox(height: 50,),
+                                  SizedBox(height: 10,),
                                   Text('Brightness',style: TextStyle(color: Colors.white),),
+                                  SizedBox(height: 20,),
 
                                 ],
                               )
                             ],
                           ),
-                          Row(
+                          Padding(
+                            padding: const EdgeInsets.only(right: 420,top: 10),
+                            child: Text("Intensity",style: TextStyle(color: Colors.white),),
+                          ),
+                          Row(mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Icon(Icons.light_mode_outlined),
+
+                                Icon(Icons.light_mode_outlined,color: Colors.white,),
                                 Container(
                                   height: 100,
                                   width:400,
@@ -77,6 +83,7 @@ class _LightState extends State<Light> {
                                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                       crossAxisAlignment: CrossAxisAlignment.end,
                                       children: [
+
                                         Slider(
                                           value: _currentSliderValue,
                                                       max: 100,
@@ -91,7 +98,7 @@ class _LightState extends State<Light> {
                                       ]
                                   ),
                                 ),
-                                Icon(Icons.light_mode_outlined),
+                                Icon(Icons.light_mode_outlined,color: Colors.white,),
                               ]
                           )
                         ]),
@@ -149,25 +156,25 @@ class _LightState extends State<Light> {
                 color: Colors.grey,
                 child: Column(
                   children: [
-                    Row(
+                    Row(mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(height: 20,),
-                        Text("Scedule"),
-                        SizedBox(width: 350,),
+                        SizedBox(height: 70,),
+                        Text("Schedule",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18)),
+                        SizedBox(width: 360,),
                         Icon(Icons.add)
                       ],
                     ),
-                    Row(
+                    Row(mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(height: 10,),
+                        SizedBox(height: 20,),
                         Text("From"),
-                        SizedBox(width: 50,),
-                        Text("6:00 pm"),
-                        SizedBox(width: 50,),
+                        SizedBox(width: 40,),
+                        Text("6:00 pm",style: TextStyle(fontWeight: FontWeight.w900,fontSize: 18),),
+                        SizedBox(width: 40,),
                         Text("To"),
-                        SizedBox(width: 50,),
-                        Text("11:00 pm"),
-                        SizedBox(width: 80,),
+                        SizedBox(width: 40,),
+                        Text("11:00 pm",style: TextStyle(fontWeight: FontWeight.w900,fontSize: 18),),
+                        SizedBox(width: 60,),
                         Icon(Icons.delete),
                         SizedBox(width: 20,),
                         Icon(Icons.edit_note)
@@ -188,28 +195,34 @@ class _LightState extends State<Light> {
                 color: Colors.white,
                 child: Column(
                   children: [
-                    SizedBox(height: 80,),
-                    Row(
+                    SizedBox(height: 40,),
+                    Row(mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Usage Today"),
-                        SizedBox(width: 200,),
-                        Text("0.5")
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10,left: 10),
+                          child: Text("Usage Today"),
+                        ),
+                        SizedBox(width: 340,),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10,left: 10),
+                          child: Text("0.5 kwH",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),),
+                        )
                       ],
                     ),
-                    SizedBox(width: 20,),
-                    Row(
+                    SizedBox(height: 20,),
+                    Row(mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text("Usage This Month"),
-                        SizedBox(width: 200,),
-                        Text("6")
+                        SizedBox(width: 330,),
+                        Text("6 kwH",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),)
                       ],
                     ),
-                    SizedBox(width: 20,),
-                    Row(
+                    SizedBox(height: 20,),
+                    Row(mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text("Total Working Hours"),
-                        SizedBox(width: 200,),
-                        Text("125")
+                        SizedBox(width: 330,),
+                        Text("125",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),)
                       ],
                     ),
 
@@ -219,10 +232,9 @@ class _LightState extends State<Light> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10,top: 0),
-            child: Image(image: AssetImage("assets/images/lamp.png")),
-          ),
+          Positioned(
+              top:0,right: 10,
+              child: Image(image: AssetImage("assets/images/lamp.png"))),
         ],
       ),
     );

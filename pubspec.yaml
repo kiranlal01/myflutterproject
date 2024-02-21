@@ -49,6 +49,8 @@ dependencies:
   omni_datetime_picker: ^1.0.9
   shared_preferences: ^2.2.2
   sqflite: ^2.3.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
 
 
   # The following adds the Cupertino Icons font to your application.

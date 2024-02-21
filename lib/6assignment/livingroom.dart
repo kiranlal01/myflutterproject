@@ -28,32 +28,56 @@ class LivingRoom extends StatelessWidget{
                 ),
                 ClipRRect(borderRadius: BorderRadius.circular(20),
                   child: Container(
-                    color: Colors.white,height: 80,width: 400,
-                    child: Row(mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.charging_station),
-                        SizedBox(width: 10,),
-                        Column(
-                          children: [
-                            SizedBox(height: 20,),
-                            Text("29.5"),
-                            Text("temp"),
-                          ],
-                        ),
-                        SizedBox(width: 10,),
-                        Icon(Icons.light),
-                        SizedBox(width: 10,),
-                        Column(
-                          children: [
-                            SizedBox(height: 20,),
-                            Text("29.5"),
-                            Text("temp"),
-                          ],
-                        )
-                      ],
-                    ),
+                    color: Colors.white,height: 60,width: 400,
+                    child: Row(
+                        children: [
+
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20,top: 5),
+                            child: Column(
+                                children: [
+                                  Row(
+                                      children:[
+                                        Icon(Icons.egg_rounded,size:15,),
+                                        Text("25'C",style: TextStyle(fontSize:15),),
+                                      ]),
+                                  Text('Temperature',style: TextStyle(fontSize:10)),
+                                ]),
+                          ),
+                          SizedBox(width: 40,),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5,left: 40),
+                            child: Column(
+                              children: [
+                                Row(
+                                    children:[
+                                      Icon(Icons.egg_rounded,size: 15,),
+                                      Text("57'C",style: TextStyle(fontSize:15)),
+                                    ]),
+                                Text('Humidity',style: TextStyle(fontSize:10)),
+                              ],),
+                          ),
+                          SizedBox(width: 60,),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5,left:60),
+                            child: Column(
+                              children: [
+                                Row(
+                                    children:[
+                                      Icon(Icons.egg_rounded,size: 15,),
+                                      Text("80'C",style: TextStyle(fontSize:15)),
+                                    ]),
+                                Text('Lightining',style: TextStyle(fontSize:10))
+                              ],),
+                          ),
+                        ]),
                   ),
                 ),
+                SizedBox(width: 30,),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: Image(image: AssetImage("assets/images/graph.jpg"),height: 120,),
+                )
               ],
             ),
           ),
@@ -217,7 +241,7 @@ class LivingRoom extends StatelessWidget{
                           SizedBox(height: 10,),
                           Padding(
                             padding: const EdgeInsets.only(left: 20),
-                            child: Text("Smart TV"),
+                            child: Text("TV"),
                           ),
                           SizedBox(height: 5,),
                           Padding(
